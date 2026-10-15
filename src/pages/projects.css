@@ -1,0 +1,200 @@
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  /* Leaves room for the oversized project number that rises above the first row */
+  margin-bottom: clamp(80px, 10vw, 140px);
+}
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 10px 0 22px;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s var(--ease-out),
+    border-color 0.2s var(--ease-out),
+    color 0.2s var(--ease-out);
+}
+.filter-chip:hover {
+  border-color: var(--ink);
+}
+.filter-chip.is-active {
+  background: var(--dark);
+  border-color: var(--dark);
+  color: #fff;
+}
+.filter-count {
+  display: grid;
+  place-items: center;
+  min-width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: var(--ink);
+  font-size: 0.85rem;
+}
+.filter-chip.is-active .filter-count {
+  background: var(--accent);
+  color: #fff;
+}
+
+.project-list {
+  display: grid;
+  gap: clamp(72px, 10vw, 140px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-row {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: clamp(32px, 6vw, 88px);
+}
+.project-row.is-flipped .project-visual {
+  order: 2;
+}
+
+/* Visual stack */
+.project-visual {
+  position: relative;
+  isolation: isolate;
+  padding: 0 8% 12% 0;
+}
+.project-num {
+  position: absolute;
+  left: -0.08em;
+  top: -0.62em;
+  z-index: -1;
+  color: var(--accent-tint);
+  font-size: clamp(6rem, 14vw, 11rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  -webkit-text-stroke: 2px var(--accent-soft);
+}
+.project-blob {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 70%;
+  height: 80%;
+  z-index: -1;
+  border-radius: 40% 60% 32px 32px;
+  background: linear-gradient(135deg, var(--accent-soft), var(--accent));
+  opacity: 0.85;
+}
+.project-shot {
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 24px 48px -24px rgba(23, 18, 20, 0.35);
+  object-fit: cover;
+  object-position: top;
+}
+.project-shot--main {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  transition: transform 0.5s var(--ease-out);
+}
+.project-shot--alt {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 46%;
+  aspect-ratio: 4 / 3;
+  border: 6px solid #fff;
+  transition: transform 0.5s var(--ease-out);
+}
+/* Phone screens are tall; show them whole instead of cropping */
+.is-mobile-app .project-shot {
+  object-fit: contain;
+  background: var(--accent-tint);
+}
+
+.project-row:hover .project-shot--main {
+  transform: translateY(-6px);
+}
+.project-row:hover .project-shot--alt {
+  transform: translate(6px, 6px) rotate(1.5deg);
+}
+
+/* Info */
+.project-type {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: var(--accent-tint);
+  color: var(--accent-strong);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.project-title {
+  margin-top: 16px;
+  font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.project-desc {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+.project-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.project-tools li {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.project-features {
+  display: grid;
+  gap: 8px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.project-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+.project-features svg {
+  flex-shrink: 0;
+  padding: 3px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+}
+.project-cta {
+  margin-top: 28px;
+}
+
+@media (max-width: 900px) {
+  .project-row {
+    grid-template-columns: 1fr;
+  }
+  .project-row.is-flipped .project-visual {
+    order: 0;
+  }
+}

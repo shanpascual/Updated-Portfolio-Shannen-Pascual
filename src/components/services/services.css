@@ -1,0 +1,130 @@
+.services {
+  padding-inline: clamp(0px, 1.5vw, 24px);
+}
+
+.services-panel {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(64px, 8vw, 104px);
+  border-radius: clamp(24px, 4vw, 50px);
+  background:
+    radial-gradient(120% 80% at 100% 0%, rgba(214, 65, 108, 0.22), transparent 55%),
+    radial-gradient(90% 70% at 0% 100%, rgba(214, 65, 108, 0.14), transparent 60%),
+    repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.025) 0 2px, transparent 2px 46px),
+    var(--dark);
+  color: var(--on-dark);
+}
+
+.services-glow {
+  position: absolute;
+  right: -120px;
+  bottom: -160px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 211, 218, 0.35), transparent 65%);
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+.services-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+.services-head p {
+  max-width: 460px;
+  color: var(--on-dark-muted);
+  font-size: 1.1rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 28px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.service-card.spotlight-card {
+  height: 100%;
+  min-height: 420px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 32px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  transition: transform 0.35s var(--ease-out);
+}
+.service-card.spotlight-card:hover {
+  transform: translateY(-6px);
+}
+
+.service-title {
+  position: relative;
+  z-index: 1;
+  padding: 24px 28px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.service-media {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  margin: 24px 24px 0;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  background: #fff;
+}
+.service-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.5s var(--ease-out);
+}
+.service-card:hover .service-media img {
+  transform: scale(1.04);
+}
+
+/* Notched corner holding the arrow, as in the reference */
+.service-link.icon-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 76px;
+  height: 76px;
+  border-radius: 28px 0 32px 0;
+  background: var(--dark);
+  box-shadow: 0 0 0 10px var(--dark);
+}
+.service-link.icon-btn:hover {
+  background: var(--accent);
+  transform: none;
+}
+.service-link svg {
+  transition: transform 0.25s var(--ease-out);
+}
+.service-link:hover svg {
+  transform: rotate(45deg);
+}
+
+@media (max-width: 960px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin-inline: auto;
+  }
+  .service-card.spotlight-card {
+    min-height: 380px;
+  }
+}

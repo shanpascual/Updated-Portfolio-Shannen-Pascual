@@ -1,0 +1,105 @@
+.page-header {
+  padding: calc(var(--nav-h) + 24px) clamp(0px, 1.5vw, 24px) 0;
+}
+
+.page-header-panel {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(56px, 8vw, 104px);
+  border-radius: clamp(24px, 4vw, 50px);
+  background:
+    radial-gradient(120% 90% at 100% 0%, rgba(214, 65, 108, 0.28), transparent 55%),
+    radial-gradient(80% 70% at 0% 100%, rgba(214, 65, 108, 0.14), transparent 60%),
+    repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.025) 0 2px, transparent 2px 46px),
+    var(--dark);
+  color: var(--on-dark);
+}
+
+.page-header-glow {
+  position: absolute;
+  right: -100px;
+  top: -120px;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 211, 218, 0.3), transparent 65%);
+  filter: blur(16px);
+  pointer-events: none;
+}
+
+.page-header-inner {
+  position: relative;
+  text-align: center;
+}
+
+.breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 6px 16px;
+  list-style: none;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 0.95rem;
+}
+.breadcrumb li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.breadcrumb a {
+  color: var(--on-dark-muted);
+  transition: color 0.2s var(--ease-out);
+}
+.breadcrumb a:hover {
+  color: #fff;
+}
+.breadcrumb [aria-current] {
+  color: #ff8fb0;
+  font-weight: 600;
+}
+
+.page-title {
+  margin-top: 20px;
+  font-size: clamp(2.6rem, 7vw, 5.5rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+.page-title-line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 0.25em;
+}
+.page-title-blur {
+  display: inline-flex;
+}
+
+.page-intro {
+  max-width: 640px;
+  margin: 18px auto 0;
+  color: var(--on-dark-muted);
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+}
+
+.page-header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+/* Light outline button variant for dark panels */
+.btn-ghost-light {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+  background: transparent;
+}
+.btn-ghost-light:hover {
+  background: #fff;
+  color: var(--ink);
+}

@@ -1,0 +1,58 @@
+.cta-band {
+  padding-block: clamp(48px, 6vw, 80px) 0;
+}
+
+.cta-band-panel {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: clamp(32px, 5vw, 56px);
+  border-radius: clamp(24px, 3vw, 40px);
+  background: linear-gradient(120deg, var(--accent-strong) 0%, var(--accent) 60%, #e3608a 100%);
+  color: #fff;
+  box-shadow: 0 30px 60px -30px rgba(176, 42, 82, 0.55);
+}
+
+.cta-band-swirl {
+  position: absolute;
+  right: -40px;
+  top: -60px;
+  width: 260px;
+  height: 260px;
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.22);
+  stroke-width: 1.5;
+  pointer-events: none;
+}
+
+.cta-band-copy {
+  position: relative;
+  max-width: 640px;
+}
+.cta-band-copy h2 {
+  font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.cta-band-copy p {
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.1rem;
+}
+
+.cta-band-btn {
+  position: relative;
+  min-height: 56px;
+  padding-inline: 32px;
+  background: var(--dark);
+  color: #fff;
+}
+.cta-band-btn:hover {
+  background: #fff;
+  color: var(--accent-strong);
+}

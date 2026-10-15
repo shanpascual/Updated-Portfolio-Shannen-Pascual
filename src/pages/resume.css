@@ -1,0 +1,173 @@
+.resume-card {
+  max-width: 1040px;
+  margin-inline: auto;
+}
+.resume-card article {
+  padding: clamp(24px, 5vw, 64px);
+  border: 1px solid var(--line);
+  border-radius: clamp(24px, 3vw, 40px);
+  background: var(--surface);
+  box-shadow: 0 40px 80px -40px rgba(176, 42, 82, 0.28);
+}
+
+.resume-profile {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: clamp(20px, 4vw, 40px);
+  padding-bottom: clamp(24px, 4vw, 40px);
+  border-bottom: 1.5px dashed var(--accent-soft);
+}
+.resume-profile img {
+  width: clamp(120px, 16vw, 180px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 5px solid var(--accent-tint);
+  box-shadow: 0 0 0 2px var(--accent);
+}
+.resume-name {
+  font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+.resume-role {
+  margin-top: 6px;
+  color: var(--accent-strong);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.resume-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--ink-2);
+}
+.resume-contacts li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.resume-contacts svg {
+  color: var(--accent);
+}
+.resume-contacts a:hover {
+  color: var(--accent-strong);
+  text-decoration: underline;
+}
+
+.resume-block {
+  padding-top: clamp(24px, 4vw, 36px);
+}
+.resume-block-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.resume-block-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--dark);
+  color: #fff;
+}
+.resume-overview {
+  color: var(--ink-2);
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.resume-edu {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.resume-edu li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: var(--surface-2);
+  transition: background-color 0.2s var(--ease-out);
+}
+.resume-edu li:hover {
+  background: var(--accent-tint);
+}
+.resume-edu-degree {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.resume-edu-meta {
+  color: var(--muted);
+}
+.resume-honor {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.resume-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(16px, 4vw, 48px);
+}
+.resume-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.resume-list li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--ink-2);
+}
+.resume-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.resume-list a:hover {
+  color: var(--accent-strong);
+  text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+  .resume-columns {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .resume-profile {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+  .resume-contacts {
+    justify-content: center;
+  }
+}

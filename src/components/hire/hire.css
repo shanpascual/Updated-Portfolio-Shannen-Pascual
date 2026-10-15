@@ -1,0 +1,71 @@
+.hire {
+  padding-inline: clamp(0px, 1.5vw, 24px);
+}
+
+.hire-panel {
+  padding-block: clamp(56px, 7vw, 96px);
+  border-radius: clamp(24px, 4vw, 50px);
+  background: var(--surface-2);
+}
+
+.hire-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(32px, 5vw, 80px);
+}
+
+/* Source PNG has a baked-in white background; multiply lets the panel colour show through.
+   Set on the animated wrapper because its transform creates an isolated stacking context. */
+.hire-visual {
+  mix-blend-mode: multiply;
+}
+
+.hire-visual img {
+  width: 100%;
+  max-width: 520px;
+  margin-inline: auto;
+}
+
+.hire-lead {
+  margin-top: 20px;
+  max-width: 520px;
+  color: var(--muted);
+  font-size: 1.15rem;
+}
+
+.hire-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(24px, 4vw, 56px);
+  margin: 36px 0 40px;
+}
+.hire-stats dd {
+  margin: 0;
+}
+.hire-num {
+  font-size: clamp(2rem, 3.6vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.hire-label {
+  margin-top: 6px;
+  color: var(--muted);
+}
+
+.hire-btn {
+  min-height: 60px;
+  padding-inline: 40px;
+  border-radius: 20px;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 860px) {
+  .hire-grid {
+    grid-template-columns: 1fr;
+  }
+  .hire-visual img {
+    max-width: 360px;
+  }
+}

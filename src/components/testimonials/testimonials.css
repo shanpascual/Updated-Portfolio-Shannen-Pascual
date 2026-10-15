@@ -1,0 +1,111 @@
+.testimonials {
+  padding-inline: clamp(0px, 1.5vw, 24px);
+}
+
+.testimonials-panel {
+  padding-block: clamp(64px, 8vw, 104px);
+  border-radius: clamp(24px, 4vw, 50px);
+  background:
+    radial-gradient(70% 60% at 50% 0%, rgba(214, 65, 108, 0.2), transparent 70%),
+    repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.025) 0 2px, transparent 2px 46px),
+    var(--dark);
+  color: var(--on-dark);
+}
+
+.testimonials-head {
+  text-align: center;
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+.testimonials-head p {
+  max-width: 640px;
+  margin: 18px auto 0;
+  color: var(--on-dark-muted);
+  font-size: 1.1rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 24px);
+  margin: 0;
+  padding: 28px 0 0;
+  list-style: none;
+}
+
+.testimonial figure {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 28px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  transition:
+    border-color 0.25s var(--ease-out),
+    transform 0.35s var(--ease-out);
+}
+.testimonial figure:hover {
+  border-color: rgba(214, 65, 108, 0.6);
+  transform: translateY(-4px);
+}
+
+.testimonial-mark {
+  position: absolute;
+  right: 18px;
+  top: -28px;
+  padding: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  fill: #fff;
+}
+
+.testimonial-who {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.testimonial-who img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+}
+.testimonial-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.testimonial-role {
+  color: var(--on-dark-muted);
+  font-size: 0.95rem;
+}
+
+.testimonial-stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin: 18px 0 14px;
+  color: #ffb547;
+}
+.testimonial-stars span {
+  margin-left: 8px;
+  color: var(--on-dark);
+  font-weight: 600;
+}
+
+.testimonial blockquote {
+  margin: 0;
+  color: #ece5e7;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 960px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+    margin-inline: auto;
+  }
+}
