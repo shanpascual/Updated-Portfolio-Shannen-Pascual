@@ -4,7 +4,7 @@ export const PROFILE = {
   photo: '/images/shannen-resume-image.png',
   location: 'Angeles City, Pampanga, Philippines',
   overview:
-    'An aspiring front-end developer and UI/UX designer, passionate about creating visually engaging and user-friendly digital experiences. As a BS Information Technology student, I have developed skills in web design, responsive development, and interface prototyping using modern tools and frameworks. I continuously explore opportunities to expand my technical expertise and creative design approach.',
+    "A 4th-year BS Information Technology student at Holy Angel University, aspiring to work as a front-end developer and UI/UX designer. During my on-the-job training at the Clark International Airport Corporation's Management Information Systems Department, I contributed to the interface and form validations of a Risk Management Information System. I also build web projects with React, Angular and Figma, and I'm looking for opportunities where I can keep growing as a developer and designer.",
 };
 
 export const QUICK_FACTS = [
@@ -30,19 +30,46 @@ export const EXPERIENCE_LEVELS = [
 
 export const EDUCATION = [
   {
-    degree: 'Bachelor of Science in Information Technology',
+    degree: 'Bachelor of Science in Information Technology (Web Development)',
     school: 'Holy Angel University',
-    period: 'Currently 3rd Year',
+    period: 'Currently 4th Year',
     honor: "Dean's Lister",
   },
   { degree: 'Senior High School – STEM', school: 'Holy Angel University', period: '2022 – 2023', honor: '3rd Honor' },
   { degree: 'Junior High School', school: 'Holy Angel University', period: '2017 – 2021', honor: 'With Honors' },
 ];
 
+export const EXPERIENCE = [
+  {
+    role: 'On-the-Job Trainee · UI/UX & Front-End',
+    org: 'Clark International Airport Corporation (CIAC) · Management Information Systems Department',
+    period: '2026',
+    points: [
+      'Contributed to the Risk Management Information System (RMS), a web system built with JSX and Supabase.',
+      'Designed screens in Figma and worked on the interface and user experience of the system.',
+      'Implemented form validations to keep the data entered into the system accurate and consistent.',
+    ],
+  },
+  {
+    role: 'Freelance Front-End Web Developer',
+    org: 'M & J Quality Used Cars · Client Project',
+    period: 'December 2025',
+    points: [
+      'Designed and built a mobile-first digital showroom with a clean inventory layout and clear calls-to-action.',
+      'Used Angular and MongoDB, with optimized images and SEO for faster loading and better visibility.',
+    ],
+  },
+];
+
 export const RESUME_SKILLS = [
-  'Front-End Web Development (HTML, CSS, JavaScript)',
+  'Front-End Web Development (HTML, CSS, JavaScript, React)',
   'Responsive Web Design',
   'UI/UX Design and Prototyping (Figma)',
+  'Back-End Basics (Supabase, Node.js, MongoDB)',
+  'Angular',
+  'Cloud Fundamentals (AWS Academy)',
+  'Web Analytics (Google Analytics)',
+  'C# Fundamentals',
   'Digital Marketing Basics',
   'Version Control (Git, GitHub)',
   'Time Management and Collaboration',

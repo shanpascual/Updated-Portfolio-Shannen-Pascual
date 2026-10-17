@@ -53,12 +53,26 @@ export const JOURNEY = [
 
 export const PROJECTS = [
   {
+    title: 'CIAC Risk Management Information System',
+    category: 'Web',
+    gallery: ['/images/rms-1.jpg', '/images/rms-2.jpg'],
+    features: ['UI/UX Design', 'Form Validations', 'Supabase Backend'],
+    short: 'CIAC RMS',
+    type: 'Web System · OJT Project',
+    date: 'July 2026',
+    description:
+      'A Risk Management Information System built with the MIS Department at Clark International Airport Corporation during my on-the-job training. I contributed to the interface design and the input validations, helping keep the data entered into the system clean and the screens clear for staff to use. The screens shown here are my Figma designs, since the live system is company property and not available for public viewing.',
+    tools: ['Figma', 'JSX', 'Supabase', 'Form Validation'],
+    img: '/images/rms-1.jpg',
+  },
+  {
     title: 'Ben Ibe Website Mock Up',
     category: 'UI/UX',
     gallery: ['/images/ben-ibe-1.png', '/images/ben-ibe-2.png'],
     features: ['Visual Hierarchy', 'Intuitive Flow', 'Warm Palette'],
     short: 'Ben Ibe',
     type: 'UI/UX Design',
+    date: 'October 2025',
     description:
       'A high-fidelity website mock-up for a flower shop in Angeles City. Clear visual hierarchy and well-structured content create a smooth flow from landing page to contact form, with a warm palette that conveys trust and personality.',
     tools: ['Figma', 'Prototype Design', 'Visual Hierarchy', 'Warm Palette'],
@@ -72,6 +86,7 @@ export const PROJECTS = [
     features: ['Digital Showroom', 'Mobile-First', 'Optimized Assets'],
     short: 'M & J Cars',
     type: 'Full Website',
+    date: 'December 2025',
     description:
       'A freelance digital showroom for quality used cars. A responsive, mobile-first platform with a clean inventory layout, clear sales calls-to-action and optimized images for fast loading.',
     tools: ['Angular', 'MongoDB', 'SEO', 'Responsive Design', 'Figma'],
@@ -85,6 +100,7 @@ export const PROJECTS = [
     features: ['Premium Shopping UX', 'Typography Selection', 'White-space Management'],
     short: 'Fleur Lush',
     type: 'E-commerce Design',
+    date: 'September 2024',
     description:
       'An aesthetic-driven concept for a fictional floral brand, exploring visual balance and high-end retail branding. Typography and white-space were tuned to give the shopping experience its "lush" feel.',
     tools: ['Figma', 'Visual Branding', 'Prototype Animation'],
@@ -98,14 +114,14 @@ export const PROJECTS = [
     features: ['Gamified Savings', 'Interactive Feedback', 'Vibrant Interface'],
     short: 'Iponly',
     type: 'Mobile App Concept',
+    date: 'October 2025',
     description:
       'A gamified savings app tackling the habit of consistent saving. User flows keep rewards and progress tracking from cluttering the core features, with interactive feedback loops and a vibrant interface.',
     tools: ['UI/UX Design', 'Mobile Prototyping', 'User Research', 'Node.js'],
-    img: '/images/iponly-1.png',
+    img: '/images/iponly-app.png',
     link: 'https://iponly.vercel.app/',
   },
 ];
-
 export const TESTIMONIALS = [
   {
     name: 'Julien Michael Punsalan',
@@ -181,6 +197,32 @@ export const CERTIFICATIONS = [
     img: '/images/cert-skillfront.png',
     link: 'https://www.skillfront.com/Badges/64197264603842',
   },
+
+      {
+    title: 'Intro to C# for Web Development',
+    issuer: 'Simplilearn SkillUP',
+    img: '/images/introduction to c  cert.png',
+    link: 'https://simpli-web.app.link/e/Nfw3YQXkg7b',
+  },
+  {
+    title: 'AI for Business Applications',
+    issuer: 'Saylor University',
+    img: '/images/saylor ai for business certification.png',
+    link: 'https://learn.saylor.org/pluginfile.php/1/tool_certificate/issues/1792232549/8308403159SP.pdf',
+  },
+    {
+    title: 'AWS Academy Cloud Foundations',
+    issuer: 'AWS Academy',
+    img: '/images/cert-aws-cloud-foundations.png',
+    link: 'https://www.credly.com/earner/earned/badge/e2b11faf-3055-4d94-8f76-dd1fe995b2dd',
+  },
+  {
+    title: 'Google Analytics Certification',
+    issuer: 'Google',
+    img: '/images/cert-google-analytics.png',
+    link: 'https://skillshop.credential.net/8cfa4294-e4ac-41ff-990b-b8d3414d6951#acc.OAxZ76EC',
+  },
+
 ];
 
 export const CONTACT = {

@@ -79,17 +79,20 @@ export default function Portfolio() {
               <li key={tool}>{tool}</li>
             ))}
           </ul>
+          <p className="portfolio-date">{project.date}</p>
           <h3 className="portfolio-title">
             {project.title}
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="portfolio-open"
-              aria-label={`Open ${project.title} (opens in new tab)`}
-            >
-              <ArrowUpRight size={22} aria-hidden="true" />
-            </a>
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="portfolio-open"
+                aria-label={`Open ${project.title} (opens in new tab)`}
+              >
+                <ArrowUpRight size={22} aria-hidden="true" />
+              </a>
+            )}
           </h3>
           <p className="portfolio-desc">{project.description}</p>
         </div>

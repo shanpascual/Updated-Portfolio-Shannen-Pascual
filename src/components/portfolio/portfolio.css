@@ -203,6 +203,13 @@
   font-size: 1.1rem;
 }
 
+.portfolio-date {
+  margin: 0 0 6px;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
 @keyframes detail-in {
   from {
     opacity: 0;

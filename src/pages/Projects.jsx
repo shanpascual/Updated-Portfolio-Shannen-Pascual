@@ -32,7 +32,7 @@ function ProjectRow({ project, index }) {
       </AnimatedContent>
 
       <AnimatedContent distance={40} delay={0.1} className="project-info">
-        <span className="project-type">{project.type}</span>
+        <span className="project-type">{project.type} · {project.date}</span>
         <h2 className="project-title">{project.title}</h2>
         <p className="project-desc">{project.description}</p>
 
@@ -50,10 +50,12 @@ function ProjectRow({ project, index }) {
           ))}
         </ul>
 
-        <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary project-cta">
-          Explore Project <ArrowUpRight size={20} aria-hidden="true" />
-          <span className="sr-only">(opens in new tab)</span>
-        </a>
+        {project.link && (
+          <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary project-cta">
+            Explore Project <ArrowUpRight size={20} aria-hidden="true" />
+            <span className="sr-only">(opens in new tab)</span>
+          </a>
+        )}
       </AnimatedContent>
     </li>
   );

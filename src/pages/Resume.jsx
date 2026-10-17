@@ -1,10 +1,10 @@
 import { Link } from 'react-router';
-import { Award, Check, Download, GraduationCap, Mail, MapPin, Phone, Sparkles } from 'lucide-react';
+import { Award, Briefcase, Check, Download, GraduationCap, Mail, MapPin, Phone, Sparkles } from 'lucide-react';
 import PageHeader from '../components/layout/PageHeader';
 import CtaBand from '../components/layout/CtaBand';
 import AnimatedContent from '../components/reactbits/AnimatedContent';
 import { CERTIFICATIONS, CONTACT, RESUME_PDF } from '../data/content';
-import { EDUCATION, PROFILE, RESUME_SKILLS } from '../data/profile';
+import { EDUCATION, EXPERIENCE, PROFILE, RESUME_SKILLS } from '../data/profile';
 import './resume.css';
 
 function ResumeBlock({ icon: Icon, title, children, className = '' }) {
@@ -28,7 +28,7 @@ export default function Resume() {
         title="My"
         accent="Resume"
         crumb="Resume"
-        intro="Education, skills and certifications at a glance. Grab the PDF for the printable version."
+        intro="Experience, education, skills and certifications at a glance. Grab the PDF for the printable version."
       >
         <a href={RESUME_PDF} download className="btn btn-primary">
           <Download size={18} aria-hidden="true" /> Download PDF
@@ -63,6 +63,27 @@ export default function Resume() {
 
               <ResumeBlock icon={Sparkles} title="Career Overview">
                 <p className="resume-overview">{PROFILE.overview}</p>
+              </ResumeBlock>
+
+              <ResumeBlock icon={Briefcase} title="Experience">
+                <ol className="resume-exp">
+                  {EXPERIENCE.map(item => (
+                    <li key={item.org}>
+                      <div className="resume-exp-head">
+                        <div>
+                          <p className="resume-edu-degree">{item.role}</p>
+                          <p className="resume-edu-meta">{item.org}</p>
+                        </div>
+                        <span className="resume-honor">{item.period}</span>
+                      </div>
+                      <ul className="resume-list">
+                        {item.points.map(point => (
+                          <li key={point}>{point}</li>
+                        ))}
+                      </ul>
+                    </li>
+                  ))}
+                </ol>
               </ResumeBlock>
 
               <ResumeBlock icon={GraduationCap} title="Education">

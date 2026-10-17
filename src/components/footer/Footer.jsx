@@ -20,7 +20,10 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <Link to="/" className="footer-logo">
-              <span className="nav-logo-mark">SP</span> SHANNEN PASCUAL
+              <span className="nav-logo-mark">
+               <img src="/images/logo.png" alt="" />
+                </span>{' '}
+                SHANNEN PASCUAL
             </Link>
             <p>
               Aspiring front-end developer and UI/UX designer from {CONTACT.address}, passionate about visually engaging,

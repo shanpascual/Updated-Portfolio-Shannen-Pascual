@@ -156,6 +156,33 @@
   text-decoration: underline;
 }
 
+.resume-exp {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.resume-exp > li {
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: var(--surface-2);
+  transition: background-color 0.2s var(--ease-out);
+}
+.resume-exp > li:hover {
+  background: var(--accent-tint);
+}
+.resume-exp-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.resume-exp .resume-list {
+  margin-top: 14px;
+}
+
 @media (max-width: 760px) {
   .resume-columns {
     grid-template-columns: 1fr;
