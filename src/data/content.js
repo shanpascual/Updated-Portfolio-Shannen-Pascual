@@ -10,6 +10,7 @@ export const NAV_RIGHT = [
 ];
 
 export const RESUME_PDF = '/Shannen-Pascual-Resume.pdf';
+export const CV_PDF = '/CV - Shannen-Pascual.pdf';
 
 export const ROLES = ['Front-End Developer', 'UI/UX Designer', 'Web Designer'];
 
@@ -26,7 +27,7 @@ export const SERVICES = [
 export const JOURNEY = [
   {
     place: 'Holy Angel University',
-    period: 'Currently 3rd Year',
+    period: 'Currently 4th Year',
     title: 'BS Information Technology',
     detail: "Dean's Lister. Building skills in web design, responsive development and interface prototyping.",
   },

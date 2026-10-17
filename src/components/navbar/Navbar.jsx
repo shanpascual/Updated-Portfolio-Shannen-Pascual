@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router';
 import { Download, Menu, X } from 'lucide-react';
-import { NAV_LEFT, NAV_RIGHT, RESUME_PDF } from '../../data/content';
+import { NAV_LEFT, NAV_RIGHT, CV_PDF } from '../../data/content';
 import './navbar.css';
 
 const ALL_LINKS = [...NAV_LEFT, ...NAV_RIGHT];
@@ -11,10 +11,10 @@ function ResumeCta({ isBlock = false }) {
   return (
     <li>
       <a
-        href={RESUME_PDF}
-        download
-        className={`nav-cta${isBlock ? ' nav-cta--block' : ''}`}
-        aria-label="Download CV (PDF)"
+      href={CV_PDF}
+      download="Shannen-Pascual-CV.pdf"
+      className={`nav-cta${isBlock ? ' nav-cta--block' : ''}`}
+      aria-label="Download CV (PDF)"
       >
         <Download size={18} aria-hidden="true" /> {isBlock ? 'Download CV' : 'CV'}
       </a>
@@ -56,7 +56,9 @@ export default function Navbar() {
           </ul>
 
           <Link to="/" className="nav-logo" aria-label="Shannen Pascual — home">
-            <span className="nav-logo-mark">SP</span>
+            <span className="nav-logo-mark">
+            <img src="/images/Personal_Logo-removebg-preview.png" alt="" />
+            </span>
             <span className="nav-logo-text">SHANNEN</span>
           </Link>
 
