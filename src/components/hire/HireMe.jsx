@@ -1,12 +1,31 @@
 import { Link } from 'react-router';
+import { ArrowUpRight, Briefcase, Palette, TrendingUp } from 'lucide-react';
 import CountUp from '../reactbits/CountUp';
-import AnimatedContent from '../reactbits/AnimatedContent';
+import { CERTIFICATIONS, PROJECTS } from '../../data/content';
 import './hire.css';
 
+const REASONS = [
+  {
+    icon: Palette,
+    title: 'I design before I code',
+    text: 'I plan layouts, spacing and user flows in Figma first, so what I build is clear and easy to use.',
+  },
+  {
+    icon: Briefcase,
+    title: 'Experience with real projects',
+    text: 'Client work, group projects and on-the-job training at CIAC taught me to build for real users and deadlines.',
+  },
+  {
+    icon: TrendingUp,
+    title: 'Always improving',
+    text: 'I keep adding skills, from React and Supabase to cloud and analytics certifications.',
+  },
+];
+
 const STATS = [
-  { value: 4, label: 'Projects Completed' },
-  { value: 4, label: 'Happy Clients' },
-  { value: 8, label: 'Certifications' },
+  { value: PROJECTS.length, label: 'Projects completed' },
+  { value: 4, label: 'Happy clients' },
+  { value: CERTIFICATIONS.length, label: 'Certifications' },
 ];
 
 export default function HireMe() {
@@ -14,15 +33,14 @@ export default function HireMe() {
     <section className="hire" aria-labelledby="hire-heading">
       <div className="hire-panel">
         <div className="container hire-grid">
-          <AnimatedContent direction="horizontal" reverse distance={80} className="hire-visual">
-            <img
-              src="/images/shannen-image2.png"
-              alt="Portrait of Shannen Pascual"
-              width="500"
-              height="500"
-              loading="lazy"
-            />
-          </AnimatedContent>
+          <div className="hire-visual">
+            <svg className="hire-rings" viewBox="0 0 800 800" aria-hidden="true" focusable="false">
+              <circle cx="400" cy="400" r="255" />
+              <circle cx="400" cy="400" r="320" />
+              <circle cx="400" cy="400" r="385" />
+            </svg>
+            <img src="/images/shannen-image2.png" alt="Portrait of Shannen Pascual" width="500" height="500" />
+          </div>
 
           <div className="hire-copy">
             <h2 id="hire-heading" className="section-title">
@@ -32,6 +50,20 @@ export default function HireMe() {
               I may still be learning, but I bring dedication, creativity, and a strong willingness to grow with every
               project I take on.
             </p>
+
+            <ul className="hire-reasons">
+              {REASONS.map(({ icon: Icon, title, text }) => (
+                <li key={title}>
+                  <span className="hire-reason-icon" aria-hidden="true">
+                    <Icon size={22} />
+                  </span>
+                  <div>
+                    <h3>{title}</h3>
+                    <p>{text}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
 
             <dl className="hire-stats">
               {STATS.map(stat => (
@@ -47,9 +79,19 @@ export default function HireMe() {
               ))}
             </dl>
 
-            <Link to="/contact" className="btn btn-outline hire-btn">
-              Hire me
-            </Link>
+            <p className="hire-status">
+              <span className="hire-dot" aria-hidden="true" />
+              Open to internships and freelance work
+            </p>
+
+            <div className="hire-actions">
+              <Link to="/contact" className="btn btn-primary">
+                Hire me <ArrowUpRight size={20} aria-hidden="true" />
+              </Link>
+              <Link to="/projects" className="btn btn-outline">
+                See my work
+              </Link>
+            </div>
           </div>
         </div>
       </div>

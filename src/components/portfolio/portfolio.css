@@ -16,7 +16,6 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
-  /* Room for the active outline, which the scroll container would otherwise clip */
   padding: 10px;
   margin-inline: -10px;
   scroll-padding-inline: 10px;

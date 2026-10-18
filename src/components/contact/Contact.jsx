@@ -1,10 +1,11 @@
 import { Award, BadgeCheck, GraduationCap } from 'lucide-react';
 import ContactForm from './ContactForm';
+import { CERTIFICATIONS } from '../../data/content';
 import './contact.css';
 
 const BADGES = [
   { icon: GraduationCap, text: "Dean's Lister" },
-  { icon: Award, text: '8 Certifications' },
+  { icon: Award, text: `${CERTIFICATIONS.length} Certifications` },
   { icon: BadgeCheck, text: 'Front-End & UI/UX' },
 ];
 

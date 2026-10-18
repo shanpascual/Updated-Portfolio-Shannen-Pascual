@@ -26,14 +26,22 @@ export const SERVICES = [
 
 export const JOURNEY = [
   {
+    place: 'Clark International Airport Corporation (CIAC)',
+    period: 'On-the-Job Training · 2026',
+    title: 'OJT Trainee · MIS Department',
+    detail:
+      'Contributed to the Risk Management Information System, working on the UI/UX, Figma designs and form validations.',
+  },
+  {
     place: 'Holy Angel University',
     period: 'Currently 4th Year',
-    title: 'BS Information Technology',
-    detail: "Dean's Lister. Building skills in web design, responsive development and interface prototyping.",
+    title: 'BS Information Technology (Web Development)',
+    detail:
+      "Consistent Dean's Lister since AY 2023–2024. Building skills in web design, responsive development and interface prototyping.",
   },
   {
     place: 'Freelance · M & J Quality Used Cars',
-    period: 'Client Project',
+    period: 'Client Project · December 2025',
     title: 'Front-End Web Developer',
     detail: 'Designed and built a mobile-first digital showroom with optimized assets and clear calls-to-action.',
   },
@@ -65,6 +73,36 @@ export const PROJECTS = [
     tools: ['Figma', 'JSX', 'Supabase', 'Form Validation'],
     img: '/images/rms-1.jpg',
   },
+
+    {
+    title: 'Campass – Campus Queue App',
+    category: 'Mobile',
+    gallery: ['/images/campass-1.png', '/images/campass-3.png'],
+    features: ['Virtual Queueing', 'Live Wait Estimates', 'Campus Office Directory'],
+    short: 'Campass',
+    type: 'Mobile App',
+    date: 'March 2026',
+    description:
+      'A Flutter mobile app that lets Holy Angel University students queue for campus offices like the Finance Office, Registrar, Admissions and Clinic, then go elsewhere while they wait instead of standing in crowded lines. It shows your queue number, how many people are ahead and the estimated wait, and lets you know when it is your turn.',
+    tools: ['Flutter', 'Dart', 'Android Studio', 'UI/UX Design'],
+    img: '/images/campass-1.png',
+  },
+
+   {
+    title: 'M & J Quality Used Cars',
+    category: 'Web',
+    gallery: ['/images/mj-cars-1.png', '/images/mj-cars-2.png'],
+    features: ['Digital Showroom', 'Mobile-First', 'Optimized Assets'],
+    short: 'M & J Cars',
+    type: 'Full Website',
+    date: 'December 2025',
+    description:
+      'A freelance digital showroom for quality used cars. A responsive, mobile-first platform with a clean inventory layout, clear sales calls-to-action and optimized images for fast loading.',
+    tools: ['Angular', 'MongoDB', 'SEO', 'Responsive Design', 'Figma'],
+    img: '/images/mj-cars-1.png',
+    link: 'https://www.mjqualitycars.com/',
+  },
+
   {
     title: 'Ben Ibe Website Mock Up',
     category: 'UI/UX',
@@ -79,20 +117,21 @@ export const PROJECTS = [
     img: '/images/ben-ibe-1.png',
     link: 'https://www.figma.com/design/Md0nXgu9QFOuyLTkyIfkv8/Ben-Ibe---Pascual---Punsalan-WD-302-Midterm-byPair?node-id=0-1&t=1wm8aHyZwaPrkvx6-1',
   },
-  {
-    title: 'M & J Quality Used Cars',
-    category: 'Web',
-    gallery: ['/images/mj-cars-1.png', '/images/mj-cars-2.png'],
-    features: ['Digital Showroom', 'Mobile-First', 'Optimized Assets'],
-    short: 'M & J Cars',
-    type: 'Full Website',
-    date: 'December 2025',
+ {
+    title: 'Iponly – Savings App',
+    category: 'Mobile',
+    gallery: ['/images/iponly-1.png', '/images/iponly-2.png'],
+    features: ['Gamified Savings', 'Interactive Feedback', 'Vibrant Interface'],
+    short: 'Iponly',
+    type: 'Mobile App Concept',
+    date: 'October 2025',
     description:
-      'A freelance digital showroom for quality used cars. A responsive, mobile-first platform with a clean inventory layout, clear sales calls-to-action and optimized images for fast loading.',
-    tools: ['Angular', 'MongoDB', 'SEO', 'Responsive Design', 'Figma'],
-    img: '/images/mj-cars-1.png',
-    link: 'https://www.mjqualitycars.com/',
+      'A gamified savings app tackling the habit of consistent saving. User flows keep rewards and progress tracking from cluttering the core features, with interactive feedback loops and a vibrant interface.',
+    tools: ['UI/UX Design', 'Mobile Prototyping', 'User Research', 'Node.js'],
+    img: '/images/iponly-app.png',
+    link: 'https://iponly.vercel.app/',
   },
+  
   {
     title: 'Fleur Lush Brand Concept',
     category: 'UI/UX',
@@ -107,20 +146,7 @@ export const PROJECTS = [
     img: '/images/fleur-2.png',
     link: 'https://www.figma.com/design/1TdgQ7OUSjnCnev3OQX2x7/Fleur-Lush-Desktop?t=1wm8aHyZwaPrkvx6-1',
   },
-  {
-    title: 'Iponly – Savings App',
-    category: 'Mobile',
-    gallery: ['/images/iponly-1.png', '/images/iponly-2.png'],
-    features: ['Gamified Savings', 'Interactive Feedback', 'Vibrant Interface'],
-    short: 'Iponly',
-    type: 'Mobile App Concept',
-    date: 'October 2025',
-    description:
-      'A gamified savings app tackling the habit of consistent saving. User flows keep rewards and progress tracking from cluttering the core features, with interactive feedback loops and a vibrant interface.',
-    tools: ['UI/UX Design', 'Mobile Prototyping', 'User Research', 'Node.js'],
-    img: '/images/iponly-app.png',
-    link: 'https://iponly.vercel.app/',
-  },
+  
 ];
 export const TESTIMONIALS = [
   {
