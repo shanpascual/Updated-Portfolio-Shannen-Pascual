@@ -10,7 +10,7 @@ export const NAV_RIGHT = [
 ];
 
 export const RESUME_PDF = '/Shannen-Pascual-Resume.pdf';
-export const CV_PDF = '/CV - Shannen-Pascual.pdf';
+export const CV_PDF = '/Shannen-Pascual-CV.pdf';
 
 export const ROLES = ['Front-End Developer', 'UI/UX Designer', 'Web Designer'];
 
@@ -131,7 +131,7 @@ export const PROJECTS = [
     img: '/images/iponly-app.png',
     link: 'https://iponly.vercel.app/',
   },
-  
+
   {
     title: 'Fleur Lush Brand Concept',
     category: 'UI/UX',
