@@ -60,7 +60,7 @@ export const JOURNEY = [
 ];
 
 export const PROJECTS = [
-  {
+    {
     title: 'CIAC Risk Management Information System',
     category: 'Web',
     gallery: ['/images/rms-1.jpg', '/images/rms-2.jpg'],
@@ -69,12 +69,13 @@ export const PROJECTS = [
     type: 'Web System · OJT Project',
     date: 'July 2026',
     description:
-      'A Risk Management Information System built with the MIS Department at Clark International Airport Corporation during my on-the-job training. I contributed to the interface design and the input validations, helping keep the data entered into the system clean and the screens clear for staff to use. The screens shown here are my Figma designs, since the live system is company property and not available for public viewing.',
+      'A Risk Management Information System built with the MIS Department at Clark International Airport Corporation during my on-the-job training. I contributed to the interface design and the input validations, helping keep the data entered into the system clean and the screens clear for staff to use.',
+    note: 'The screens shown here are my Figma designs, since the live system is company property and not available for public viewing.',
     tools: ['Figma', 'JSX', 'Supabase', 'Form Validation'],
     img: '/images/rms-1.jpg',
   },
 
-    {
+      {
     title: 'Campass – Campus Queue App',
     category: 'Mobile',
     gallery: ['/images/campass-1.png', '/images/campass-3.png'],
@@ -86,6 +87,7 @@ export const PROJECTS = [
       'A Flutter mobile app that lets Holy Angel University students queue for campus offices like the Finance Office, Registrar, Admissions and Clinic, then go elsewhere while they wait instead of standing in crowded lines. It shows your queue number, how many people are ahead and the estimated wait, and lets you know when it is your turn.',
     tools: ['Flutter', 'Dart', 'Android Studio', 'UI/UX Design'],
     img: '/images/campass-1.png',
+    link: 'https://www.figma.com/design/3THpTLodEz5M8AGORssIAQ/ADET---Campass?node-id=0-1&t=6OjAcW5KKi5kLgXJ-1',
   },
 
    {
@@ -115,7 +117,7 @@ export const PROJECTS = [
       'A high-fidelity website mock-up for a flower shop in Angeles City. Clear visual hierarchy and well-structured content create a smooth flow from landing page to contact form, with a warm palette that conveys trust and personality.',
     tools: ['Figma', 'Prototype Design', 'Visual Hierarchy', 'Warm Palette'],
     img: '/images/ben-ibe-1.png',
-    link: 'https://www.figma.com/design/Md0nXgu9QFOuyLTkyIfkv8/Ben-Ibe---Pascual---Punsalan-WD-302-Midterm-byPair?node-id=0-1&t=1wm8aHyZwaPrkvx6-1',
+    link: 'https://www.figma.com/design/Md0nXgu9QFOuyLTkyIfkv8/Ben-Ibe---Pascual---Punsalan-WD-302-Midterm-byPair?node-id=0-1&t=fe9aicfULa7R8Lv4-1',
   },
  {
     title: 'Iponly – Savings App',
@@ -144,7 +146,7 @@ export const PROJECTS = [
       'An aesthetic-driven concept for a fictional floral brand, exploring visual balance and high-end retail branding. Typography and white-space were tuned to give the shopping experience its "lush" feel.',
     tools: ['Figma', 'Visual Branding', 'Prototype Animation'],
     img: '/images/fleur-2.png',
-    link: 'https://www.figma.com/design/1TdgQ7OUSjnCnev3OQX2x7/Fleur-Lush-Desktop?t=1wm8aHyZwaPrkvx6-1',
+    link: 'https://www.figma.com/design/1TdgQ7OUSjnCnev3OQX2x7/Fleur-Lush-Desktop?t=fe9aicfULa7R8Lv4-1',
   },
   
 ];

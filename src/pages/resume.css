@@ -163,6 +163,31 @@
   padding: 0;
   list-style: none;
 }
+/* Grouped skills */
+.resume-skill-group + .resume-skill-group {
+  margin-top: 18px;
+}
+.resume-skill-title {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.resume-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.resume-tags li {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: var(--ink-2);
+  font-size: 0.95rem;
+}
 .resume-exp > li {
   padding: 18px 20px;
   border-radius: 18px;
@@ -174,10 +199,23 @@
 }
 .resume-exp-head {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 16px;
+}
+.resume-exp-head > div {
+  flex: 1;
+  min-width: 0;
+}
+.resume-exp-head .resume-honor {
+  flex: none;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .resume-exp-head {
+    flex-wrap: wrap;
+  }
 }
 .resume-exp .resume-list {
   margin-top: 14px;

@@ -79,18 +79,20 @@ export default function HireMe() {
               ))}
             </dl>
 
-            <p className="hire-status">
-              <span className="hire-dot" aria-hidden="true" />
-              Open to internships and freelance work
-            </p>
+            <div className="hire-cta">
+              <p className="hire-status">
+                <span className="hire-dot" aria-hidden="true" />
+                Open to internships and freelance work
+              </p>
 
-            <div className="hire-actions">
-              <Link to="/contact" className="btn btn-primary">
-                Hire me <ArrowUpRight size={20} aria-hidden="true" />
-              </Link>
-              <Link to="/projects" className="btn btn-outline">
-                See my work
-              </Link>
+              <div className="hire-actions">
+                <Link to="/contact" className="btn btn-primary">
+                  Hire me <ArrowUpRight size={20} aria-hidden="true" />
+                </Link>
+                <Link to="/projects" className="btn btn-outline">
+                  See my work
+                </Link>
+              </div>
             </div>
           </div>
         </div>

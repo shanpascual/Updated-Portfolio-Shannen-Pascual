@@ -20,17 +20,19 @@
 /* ---------- Portrait ---------- */
 .hire-visual {
   position: relative;
-  width: 120%;
-  max-width: 650px;
+  width: 100%;
+  max-width: 480px; /* picture size: make this smaller or bigger */
+  /* On wide screens, pull the portrait and rings toward the left edge of the panel */
   margin-left: clamp(-140px, calc((100vw - 1240px) / -2.5), 0px);
 }
 
+/* Ripple rings centred on the portrait, echoing the layered blobs in the photo */
 .hire-rings {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 820px;
-  height: 820px;
+  width: 165%; /* scales with the picture, so you only change the picture size above */
+  height: auto;
   transform: translate(-50%, -50%);
   fill: none;
   stroke: var(--accent);
@@ -39,11 +41,41 @@
   pointer-events: none;
 }
 
+/* The PNG has a baked-in white box; multiply lets the panel colour show through it.
+   Keep every ancestor free of z-index/transform so the blend reaches the panel background. */
 .hire-visual img {
   position: relative;
   width: 100%;
   height: auto;
   mix-blend-mode: multiply;
+}
+
+/* Status pill and buttons share one width, so the buttons end where the pill ends */
+.hire-cta {
+  width: fit-content;
+  max-width: 100%;
+}
+.hire-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 18px;
+  padding: 10px 18px 10px 14px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.3;
+  box-shadow: 0 6px 20px rgba(23, 18, 20, 0.08);
+}
+.hire-dot {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
 }
 
 /* ---------- Copy ---------- */
@@ -124,37 +156,16 @@
   font-size: 0.95rem;
 }
 
-.hire-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin: 0 0 18px;
-  padding: 10px 18px 10px 14px;
-  border-radius: 999px;
-  background: #fff;
-  color: var(--ink);
-  font-size: 0.95rem;
-  font-weight: 600;
-  line-height: 1.3;
-  box-shadow: 0 6px 20px rgba(23, 18, 20, 0.08);
-}
-.hire-dot {
-  flex: none;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 4px var(--accent-soft);
-}
-
 .hire-actions {
   display: flex;
-  flex-wrap: wrap;
   gap: 12px;
 }
 .hire-actions .btn {
+  flex: 1 1 0;
+  min-width: 0;
+  justify-content: center;
   min-height: 56px;
-  padding-inline: 32px;
+  padding-inline: 20px;
   font-size: 1.1rem;
 }
 
@@ -163,13 +174,12 @@
     grid-template-columns: 1fr;
   }
   .hire-visual {
-    width: 100%;
     max-width: 380px;
     margin-inline: auto;
   }
   .hire-rings {
-    width: 520px;
-    height: 520px;
+    width: 140%;
+    height: auto;
   }
 }
 

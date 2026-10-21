@@ -35,6 +35,12 @@ function ProjectRow({ project, index }) {
         <span className="project-type">{project.type} · {project.date}</span>
         <h2 className="project-title">{project.title}</h2>
         <p className="project-desc">{project.description}</p>
+        {project.note && (
+          <p className="project-note">
+            <span className="project-note-dot" aria-hidden="true" />
+            {project.note}
+          </p>
+        )}
 
         <ul className="project-tools" aria-label="Tools">
           {project.tools.map(tool => (

@@ -190,6 +190,47 @@
   margin-top: 28px;
 }
 
+/* Notice pill with a glowing orange light */
+.project-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 18px 0 0;
+  padding: 12px 18px 12px 14px;
+  border-radius: 22px;
+  background: #fff;
+  border: 1px solid rgba(249, 115, 22, 0.28);
+  box-shadow: 0 6px 20px rgba(23, 18, 20, 0.08);
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+.project-note-dot {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  margin-top: 0.42em;
+  border-radius: 50%;
+  background: #f97316;
+  box-shadow:
+    0 0 0 4px rgba(249, 115, 22, 0.22),
+    0 0 12px 2px rgba(249, 115, 22, 0.55);
+  animation: note-glow 2.4s ease-in-out infinite;
+}
+@keyframes note-glow {
+  50% {
+    box-shadow:
+      0 0 0 7px rgba(249, 115, 22, 0.1),
+      0 0 18px 4px rgba(249, 115, 22, 0.35);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-note-dot {
+    animation: none;
+  }
+}
+
 @media (max-width: 900px) {
   .project-row {
     grid-template-columns: 1fr;

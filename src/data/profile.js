@@ -1,10 +1,10 @@
 export const PROFILE = {
   name: 'Shannen G. Pascual',
-  title: 'Aspiring Front-End Developer | UI/UX Designer',
+  title: 'UI/UX Designer & Front-End Web Developer',
   photo: '/images/shannen-resume-image.png',
   location: 'Angeles City, Pampanga, Philippines',
   overview:
-    "A 4th-year BS Information Technology student at Holy Angel University, aspiring to work as a front-end developer and UI/UX designer. During my on-the-job training at the Clark International Airport Corporation's Management Information Systems Department, I contributed to the interface and form validations of a Risk Management Information System. I also build web projects with React, Angular and Figma, and I'm looking for opportunities where I can keep growing as a developer and designer.",
+    'BSIT Web Development student with practical experience in front-end development, interface prototyping, and internal web system projects. Interested in building responsive, user-friendly web applications that combine functional implementation with thoughtful UI/UX design. Seeking an entry-level opportunity to contribute to web development projects while continuing to grow technical skills.',
 };
 
 export const QUICK_FACTS = [
@@ -28,51 +28,91 @@ export const EXPERIENCE_LEVELS = [
   { label: 'Graphic Design', value: 75 },
 ];
 
-export const EDUCATION = [
-  {
-    degree: 'Bachelor of Science in Information Technology (Web Development)',
-    school: 'Holy Angel University',
-    period: 'Currently 4th Year',
-    honor: "Dean's Lister",
-  },
-  { degree: 'Senior High School – STEM', school: 'Holy Angel University', period: '2022 – 2023', honor: '3rd Honor' },
-  { degree: 'Junior High School', school: 'Holy Angel University', period: '2017 – 2021', honor: 'With Honors' },
-];
+/* ---------- Resume page ---------- */
 
 export const EXPERIENCE = [
   {
-    role: 'On-the-Job Trainee · UI/UX & Front-End',
-    org: 'Clark International Airport Corporation (CIAC) · Management Information Systems Department',
-    period: '2026',
+    title: 'On-the-Job Trainee · UI/UX & Front-End (486 Hours)',
+    subtitle: 'Clark International Airport Corporation (CIAC), Management Information Systems Department',
+    period: 'June 2026 – October 2026',
     points: [
       'Contributed to the Risk Management Information System (RMS), a web system built with JSX and Supabase.',
-      'Designed screens in Figma and worked on the interface and user experience of the system.',
-      'Implemented form validations to keep the data entered into the system accurate and consistent.',
-    ],
-  },
-  {
-    role: 'Freelance Front-End Web Developer',
-    org: 'M & J Quality Used Cars · Client Project',
-    period: 'December 2025',
-    points: [
-      'Designed and built a mobile-first digital showroom with a clean inventory layout and clear calls-to-action.',
-      'Used Angular and MongoDB, with optimized images and SEO for faster loading and better visibility.',
+      'Designed all RMS screens in Figma and refined the system’s interface and user experience.',
+      'Implemented sign-in form validation to keep submitted data accurate and consistent.',
     ],
   },
 ];
 
-export const RESUME_SKILLS = [
-  'Front-End Web Development (HTML, CSS, JavaScript, React)',
-  'Responsive Web Design',
-  'UI/UX Design and Prototyping (Figma)',
-  'Back-End Basics (Supabase, Node.js, MongoDB)',
-  'Angular',
-  'Cloud Fundamentals (AWS Academy)',
-  'Web Analytics (Google Analytics)',
-  'C# Fundamentals',
-  'Digital Marketing Basics',
-  'Version Control (Git, GitHub)',
-  'Time Management and Collaboration',
-  'Attention to Detail',
-  'Communication',
+export const RESUME_PROJECTS = [
+  {
+    title: 'Campass – Queue Management Mobile App',
+    subtitle: 'UI/UX Designer & Front-End',
+    period: 'March 2026',
+    points: [
+      'Designed a mobile queue management system using Flutter to streamline service tracking.',
+      'Designed intuitive interfaces for real-time monitoring, improving user navigation and flow.',
+      'Implemented UI/UX best practices to ensure clarity and accessibility for Android users.',
+    ],
+  },
+  {
+    title: 'MJ Quality Cars – Used Car Sales Website',
+    subtitle: 'UI/UX Designer & Front-End',
+    period: 'December 2025',
+    points: [
+      'Designed all pages and developed responsive front-end interfaces using Angular, TypeScript, HTML, and CSS.',
+      'Applied UI/UX principles to improve readability, navigation, and accessibility.',
+      'Implemented SEO best practices so the site ranks on the first page for brand-specific searches.',
+    ],
+  },
+  {
+    title: 'IPONLY – Gamified Budget Tracker App',
+    subtitle: 'UI/UX Designer',
+    period: 'October 2025',
+    points: [
+      'Conceptualized a gamified budget tracking app to boost engagement and financial awareness.',
+      'Created intuitive income and expense tracking interfaces with clear navigation and visual hierarchy.',
+      'Applied interactive UI elements and responsive layouts to improve usability.',
+    ],
+  },
 ];
+
+export const EDUCATION = [
+  {
+    degree: 'BS Information Technology · Specialization in Web Development',
+    school: 'Holy Angel University',
+    period: '2023 – Present · Expected Graduation: April 2027',
+    honor: 'Dean’s Lister',
+    detail: 'Academic Years 2023–2024, 2024–2025, and 2025–2026',
+  },
+];
+
+export const RESUME_SKILL_GROUPS = [
+  {
+    title: 'UI/UX',
+    items: [
+      'Wireframing and Prototyping',
+      'Responsive Design Principles',
+      'Design Systems and Components',
+      'Usability and Accessibility Principles',
+      'Mobile-First Design',
+    ],
+  },
+  {
+    title: 'Front-End Development',
+    items: ['HTML5 and CSS3', 'JavaScript and TypeScript', 'React (JSX)', 'Angular and Vue.js'],
+  },
+  {
+    title: 'Mobile and Back-End Development',
+    items: ['Node.js', 'Python', 'MySQL', 'MongoDB', 'Dart and Flutter', 'Supabase'],
+  },
+  {
+    title: 'Tools and Platforms',
+    items: ['Figma and Canva', 'Visual Studio Code (VS Code)', 'Android Studio', 'Git and GitHub'],
+  },
+  {
+    title: 'Soft Skills',
+    items: ['Attention to Detail', 'Time Management', 'Team Collaboration', 'Adaptability', 'Communication'],
+  },
+];
+
+export const LANGUAGES = ['Filipino (Native)', 'English'];
